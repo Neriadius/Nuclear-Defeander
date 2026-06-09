@@ -67,6 +67,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\HandSubsystemManager.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Callout.cs" />
+    <Compile Include="Assets\Scripts\Logic\ExplodeScript.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRGripButton.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRKnob.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRKnob.cs" />
