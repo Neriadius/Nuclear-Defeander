@@ -1,0 +1,25 @@
+# Unity folders
+Library/
+Temp/
+Build/
+Builds/
+Logs/
+UserSettings/
+Obj/
+
+# Addressables
+ServerData/
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.sln
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
