@@ -4,6 +4,8 @@ using UnityEngine;
 public class LaserSight : MonoBehaviour
 {
     private LineRenderer lineRenderer;
+    public bool IsHitting { get; private set; }
+    public RaycastHit CurrentHit { get; private set; }
 
     [Header("Laser Settings")]
     [SerializeField] private float maxDistance = 50f;
@@ -43,7 +45,9 @@ public class LaserSight : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, maxDistance, layersToHit))
         {
-            // End point is the world-space hit point — no InverseTransformPoint needed
+            IsHitting = true;
+            CurrentHit = hit;
+            // End point is the world-space hit point
             lineRenderer.SetPosition(1, hit.point);
 
             if (instantiatedDot != null)
@@ -56,6 +60,7 @@ public class LaserSight : MonoBehaviour
         }
         else
         {
+            IsHitting = false; 
             // Extend to max distance in world space
             lineRenderer.SetPosition(1, origin + direction * maxDistance);
 

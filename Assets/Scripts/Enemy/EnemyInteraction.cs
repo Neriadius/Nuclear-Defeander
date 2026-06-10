@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class EnemyInteraction : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float maxHealth = 100f;
+    private float currentHealth;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeHit(float damage)
     {
-        
+        currentHealth -= damage;
+        Debug.Log($"{gameObject.name} hit! HP: {currentHealth}/{maxHealth}");
+
+        if (currentHealth <= 0)
+            Die();
+    }
+
+    private void Die()
+    {
+        Debug.Log($"{gameObject.name} died.");
+        // Here should be death logic
+        Destroy(gameObject);
     }
 }
