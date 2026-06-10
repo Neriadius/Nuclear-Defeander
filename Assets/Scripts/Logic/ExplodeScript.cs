@@ -6,6 +6,6 @@ public class ExplodeScript : MonoBehaviour
     {
         //TODO: Add explosion effect here и убрать скрипт ниже
         Application.Quit();
-        Debug.Log("Ты пидорас");
+        Debug.Log("Explode");
     }
 }

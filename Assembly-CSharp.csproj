@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRLever.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
+    <Compile Include="Assets\Scripts\Logic\PhysicInteractionPushButton.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\HandSubsystemManager.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Callout.cs" />
