@@ -11,6 +11,7 @@ public class LevelOfSlider : MonoBehaviour
     public int compareToValueInt;
     public Slider_logic_LED LED;
     public AudioSource click;
+    public AudioSource bell;
 
     private float level;
     private XRSlider boxSlide;
@@ -20,6 +21,7 @@ public class LevelOfSlider : MonoBehaviour
     {
         boxSlide = GetComponent<XRSlider>();
         compareToValue.text = compareToValueInt.ToString();
+        textLevel.text = intLevel.ToString();
         StartCoroutine(Countdown());
     }
 
@@ -33,12 +35,12 @@ public class LevelOfSlider : MonoBehaviour
 
         level = boxSlide.value * 100;
         intLevel = RoundTo5((int)level);
-        textLevel.text = intLevel.ToString();
-        CompareValues(intLevel, compareToValueInt);
-        LED.LampUpdate(intLevel);
         if (intLevel != SliderValueStored)
         {
+            CompareValues(intLevel, compareToValueInt);
+            LED.LampUpdate(intLevel);
             click.Play();
+            textLevel.text = intLevel.ToString();
         }
         SliderValueStored = intLevel;
     }
@@ -68,8 +70,10 @@ public class LevelOfSlider : MonoBehaviour
     }
     IEnumerator Countdown()
     {
-        
-        yield return new WaitForSeconds(40);
+        bell.Play();
+        compareToValueInt = RoundTo5((int)Random.Range(0, 100));
+        compareToValue.text = compareToValueInt.ToString();
+        yield return new WaitForSeconds(Random.Range(15,25));
         if (CompareValues(intLevel, compareToValueInt) == 0)
         {
             StartCoroutine(Countdown());
