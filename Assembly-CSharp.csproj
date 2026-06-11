@@ -73,6 +73,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoTimeScrubControl.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRSlider.cs" />
+    <Compile Include="Assets\Scripts\Gun\GunSocketInteractor.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRPushButton.cs" />
     <Compile Include="Assets\Scripts\Logic\LevelOfSlider.cs" />
   </ItemGroup>

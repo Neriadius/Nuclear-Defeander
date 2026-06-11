@@ -6,7 +6,7 @@ public class LaserSight : MonoBehaviour
     private LineRenderer lineRenderer;
     public bool IsHitting { get; private set; }
     public RaycastHit CurrentHit { get; private set; }
-    private bool isHidden = false;
+    private bool isHidden = true;
 
     [Header("Laser Settings")]
     [SerializeField] private float maxDistance = 50f;
@@ -20,35 +20,35 @@ public class LaserSight : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        // Force world space so we can pass world positions directly
         lineRenderer.useWorldSpace = true;
         lineRenderer.positionCount = 2;
+
         if (laserDotPrefab != null)
             instantiatedDot = Instantiate(laserDotPrefab);
         HideLine();
-
     }
 
     void Awake()
     {
+        //lineRenderer = GetComponent<LineRenderer>();
+        
+        //Debug.Log("HideLine in LaserSight Awake called");
+        //HideLine();
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("LaserSight OnEnable called");
+        if (lineRenderer != null && isHidden)
         HideLine();
     }
 
-
     void Update()
     {
-        if (isHidden)
-        {
-            //if(lineRenderer.enabled == false){return;}
-            lineRenderer.enabled = false;
-            IsHitting = false;
-            if (instantiatedDot != null)
-                instantiatedDot.gameObject.SetActive(false);
-            return;
-            
+        if(!isHidden){
+            ShootLaser();
         }
-
-        lineRenderer.enabled = true;
-        ShootLaser();
     }
 
     void ShootLaser()
@@ -89,29 +89,22 @@ public class LaserSight : MonoBehaviour
         }
     }
 
-    /*public void HideLine()
+    void OnDestroy()
     {
+        if (instantiatedDot != null)
+            Destroy(instantiatedDot.gameObject);
+    }
+
+
+    public void HideLine()
+    {
+        isHidden = true;
         lineRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 0f));
     }
 
     public void ShowLine()
     {
-        lineRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 1f));
-    }*/
-
-    public void HideLine()
-    {
-        isHidden = true;
-    }
-
-    public void ShowLine()
-    {
         isHidden = false;
-    }
-
-    void OnDestroy()
-    {
-        if (instantiatedDot != null)
-            Destroy(instantiatedDot.gameObject);
+        lineRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 1f));
     }
 }
