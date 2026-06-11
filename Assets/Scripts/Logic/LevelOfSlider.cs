@@ -12,6 +12,7 @@ public class LevelOfSlider : MonoBehaviour
     public Slider_logic_LED LED;
     public AudioSource click;
     public AudioSource bell;
+    public AudioSource explosion;
 
     private float level;
     private XRSlider boxSlide;
@@ -80,6 +81,8 @@ public class LevelOfSlider : MonoBehaviour
         }
         else
         {
+            explosion.Play();
+            yield return new WaitForSeconds(17);
             SceneManager.LoadScene(1);
         }
     }

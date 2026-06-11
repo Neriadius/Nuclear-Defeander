@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: LED
       value: 
       objectReference: {fileID: 1485155571}
+    - target: {fileID: 55335371815280299, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1385513344}
+    - target: {fileID: 307168857761332040, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 394343206428262539, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
       propertyPath: m_fontSize
       value: 15
@@ -171,6 +179,10 @@ PrefabInstance:
       propertyPath: LED
       value: 
       objectReference: {fileID: 1474537658}
+    - target: {fileID: 2549392606287964606, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1385513344}
     - target: {fileID: 2612120591076289799, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
       propertyPath: m_Name
       value: Slider x4
@@ -255,6 +267,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5677264528705262416, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6101424726107302578, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
       propertyPath: m_Volume
       value: 0.601
@@ -263,10 +279,18 @@ PrefabInstance:
       propertyPath: LED
       value: 
       objectReference: {fileID: 2058474963}
+    - target: {fileID: 6135158493145346227, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1385513344}
     - target: {fileID: 6200413425311045373, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
       propertyPath: LED
       value: 
       objectReference: {fileID: 1157142179}
+    - target: {fileID: 6200413425311045373, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1385513344}
     - target: {fileID: 7040861301886334969, guid: 936817e8dd505c24ca6508f96ac658e8, type: 3}
       propertyPath: m_Value
       value: 0.7
