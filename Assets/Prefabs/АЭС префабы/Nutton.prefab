@@ -378,10 +378,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -7635826562936255635, guid: 08bda1bd79adbbb4581e825f2eff7e0c, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 87d733ba4d953d94d8eb5638bd78ed06, type: 2}
     - target: {fileID: 919132149155446097, guid: 08bda1bd79adbbb4581e825f2eff7e0c, type: 3}
       propertyPath: m_Name
       value: Button
