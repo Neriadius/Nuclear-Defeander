@@ -12,7 +12,7 @@ public class ExplodeScript : MonoBehaviour
     public AudioSource explosion;
     void Start()
     {
-      
+        
     }
 
     public void ExplodeAES()
