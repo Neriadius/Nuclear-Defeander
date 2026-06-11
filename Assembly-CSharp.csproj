@@ -1186,16 +1186,16 @@
       <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Meta.XR.Editor.ToolingSupport.RuntimeOptimizer">
-      <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.ToolingSupport.RuntimeOptimizer.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Oculus.VR">
-      <HintPath>Library\ScriptAssemblies\Oculus.VR.dll</HintPath>
+    <Reference Include="Meta.XR.RuntimeOptimizer.Core">
+      <HintPath>Library\ScriptAssemblies\Meta.XR.RuntimeOptimizer.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Rendering.LightTransport.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rendering.LightTransport.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oculus.VR">
+      <HintPath>Library\ScriptAssemblies\Oculus.VR.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
@@ -1266,24 +1266,28 @@
       <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.PlayCompanion.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Meta.XR.ImmersiveDebugger.DevAgent.Editor">
+      <HintPath>Library\ScriptAssemblies\Meta.XR.ImmersiveDebugger.DevAgent.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.XR.ARFoundation.VisualScripting">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.VisualScripting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Meta.XR.ImmersiveDebugger.DevAgent">
+      <HintPath>Library\ScriptAssemblies\Meta.XR.ImmersiveDebugger.DevAgent.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meta.Net.endel.nativewebsocket">
       <HintPath>Library\ScriptAssemblies\Meta.Net.endel.nativewebsocket.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.CompositionLayers.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.CompositionLayers.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Meta.XR.Editor.Guide.About">
       <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.Guide.About.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Meta.WitAi.TTS">
-      <HintPath>Library\ScriptAssemblies\Meta.WitAi.TTS.dll</HintPath>
+    <Reference Include="Unity.XR.CompositionLayers.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.CompositionLayers.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meta.XR.Editor.Tags">
@@ -1300,6 +1304,10 @@
     </Reference>
     <Reference Include="Unity.UnifiedRayTracing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Meta.WitAi.TTS">
+      <HintPath>Library\ScriptAssemblies\Meta.WitAi.TTS.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
@@ -1430,12 +1438,20 @@
       <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.Settings.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Meta.XR.ImmersiveDebugger.DevAgent.Tools">
+      <HintPath>Library\ScriptAssemblies\Meta.XR.ImmersiveDebugger.DevAgent.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Oculus.Platform.Editor">
       <HintPath>Library\ScriptAssemblies\Oculus.Platform.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meta.XR.ImmersiveDebugger.Interface">
       <HintPath>Library\ScriptAssemblies\Meta.XR.ImmersiveDebugger.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Meta.XR.RuntimeOptimizer">
+      <HintPath>Library\ScriptAssemblies\Meta.XR.RuntimeOptimizer.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
@@ -1496,6 +1512,10 @@
     </Reference>
     <Reference Include="Oculus.Haptics">
       <HintPath>Library\ScriptAssemblies\Oculus.Haptics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="meta.xr.ai.agentbridge.editor">
+      <HintPath>Library\ScriptAssemblies\meta.xr.ai.agentbridge.editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
@@ -1602,6 +1622,10 @@
       <HintPath>Library\ScriptAssemblies\AssistantVoiceCommandCommon.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="meta.xr.ai.mcpbridge.telemetry">
+      <HintPath>Library\ScriptAssemblies\meta.xr.ai.mcpbridge.telemetry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Meta.XR.BuildingBlocks.AIBlocks">
       <HintPath>Library\ScriptAssemblies\Meta.XR.BuildingBlocks.AIBlocks.dll</HintPath>
       <Private>False</Private>
@@ -1674,6 +1698,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="meta.xr.ai.agentbridge.telemetry">
+      <HintPath>Library\ScriptAssemblies\meta.xr.ai.agentbridge.telemetry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1696,6 +1724,10 @@
     </Reference>
     <Reference Include="Unity.XR.Simulation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Simulation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="meta.xr.ai.mcpbridge.editor">
+      <HintPath>Library\ScriptAssemblies\meta.xr.ai.mcpbridge.editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.007">
@@ -1724,6 +1756,10 @@
     </Reference>
     <Reference Include="Unity.Collections">
       <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="meta.xr.ai.mcpbridge">
+      <HintPath>Library\ScriptAssemblies\meta.xr.ai.mcpbridge.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.Hands.Editor">
@@ -1756,6 +1792,10 @@
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="meta.xr.ai.agentbridge">
+      <HintPath>Library\ScriptAssemblies\meta.xr.ai.agentbridge.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Oculus.Haptics.Editor">
@@ -1828,6 +1868,10 @@
     </Reference>
     <Reference Include="Unity.XR.MetaOpenXR.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.MetaOpenXR.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Meta.XR.RuntimeOptimizer.Editor">
+      <HintPath>Library\ScriptAssemblies\Meta.XR.RuntimeOptimizer.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Oculus.VR.Scripts.Editor">

@@ -6,8 +6,9 @@ public class GunInteraction : MonoBehaviour
     [SerializeField] private LaserSight laserSight;
 
     [Header("Gun Settings")]
-    [SerializeField] private float damage = 25f;       // seconds between shots
+    [SerializeField] private float damage = 25f;
     //private float nextFireTime = 0f;
+    private bool laserShouldBeHidden = false;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class GunInteraction : MonoBehaviour
             laserSight = GetComponentInChildren<LaserSight>();
     }
 
-    private void TryShoot()
+    public void TryShoot()
     {
         if (!laserSight.IsHitting) return;
 
@@ -23,5 +24,15 @@ public class GunInteraction : MonoBehaviour
         EnemyInteraction enemy = laserSight.CurrentHit.collider.GetComponent<EnemyInteraction>();
         if (enemy != null)
             enemy.TakeHit(damage);
+    }
+
+    public void HideLaser()
+    {
+        laserSight.HideLine();
+    }
+
+    public void ShowLaser()
+    {
+        laserSight.ShowLine();
     }
 }
