@@ -6,7 +6,7 @@ public class ExplodeScript : MonoBehaviour
 {
 
     public float explosionDelay = 3f;
-
+    public AudioSource click;
     void Start()
     {
     }
@@ -21,6 +21,7 @@ public class ExplodeScript : MonoBehaviour
 
     IEnumerator CountdownToExecution()
     {
+        click.Play();
         yield return new WaitForSeconds(explosionDelay);
         SceneManager.LoadScene(1);
     }

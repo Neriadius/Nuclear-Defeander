@@ -10,11 +10,12 @@ public class LevelOfSlider : MonoBehaviour
     public TMP_Text compareToValue;
     public int compareToValueInt;
     public Slider_logic_LED LED;
+    public AudioSource click;
 
     private float level;
     private XRSlider boxSlide;
     private int intLevel;
-
+    private int SliderValueStored;
     void Start()
     {
         boxSlide = GetComponent<XRSlider>();
@@ -35,6 +36,11 @@ public class LevelOfSlider : MonoBehaviour
         textLevel.text = intLevel.ToString();
         CompareValues(intLevel, compareToValueInt);
         LED.LampUpdate(intLevel);
+        if (intLevel != SliderValueStored)
+        {
+            click.Play();
+        }
+        SliderValueStored = intLevel;
     }
 
     private int RoundTo5(int value)
@@ -63,7 +69,7 @@ public class LevelOfSlider : MonoBehaviour
     IEnumerator Countdown()
     {
         
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(40);
         if (CompareValues(intLevel, compareToValueInt) == 0)
         {
             StartCoroutine(Countdown());
