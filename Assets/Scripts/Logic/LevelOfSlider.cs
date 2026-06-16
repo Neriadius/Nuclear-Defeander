@@ -9,10 +9,10 @@ public class LevelOfSlider : MonoBehaviour
     public TMP_Text textLevel;
     public TMP_Text compareToValue;
     public int compareToValueInt;
-    public Slider_logic_LED LED;
     public AudioSource click;
     public AudioSource bell;
     public GameObject[] lamps;
+    public GameObject ScoreCounter;
 
     private float level;
     private XRSlider boxSlide;
@@ -112,7 +112,10 @@ public class LevelOfSlider : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(1);
+                log log = new log();
+                log.massage = "To slow";
+                log.score = -50;
+                ScoreCounter.GetComponent<scoreObject>().AddScore(log);
             }
                 
         }

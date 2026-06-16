@@ -67,6 +67,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
     <Compile Include="Assets\Scripts\Logic\PhysicInteractionPushButton.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
+    <Compile Include="Assets\Scripts\Logic\scoreObject.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\Light.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\HandSubsystemManager.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Callout.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\Scripts\Logic\Exit.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRSlider.cs" />
+    <Compile Include="Assets\Scripts\Logic\log.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRPushButton.cs" />
     <Compile Include="Assets\Scripts\Logic\Slider_logic_LED.cs" />
     <Compile Include="Assets\Scripts\Logic\LevelOfSlider.cs" />
