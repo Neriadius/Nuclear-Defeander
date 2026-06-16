@@ -18,7 +18,7 @@ public class LevelOfSlider : MonoBehaviour
     private XRSlider boxSlide;
     private int intLevel;
     private int SliderValueStored;
-    void Start()
+    void Awake()
     {
         boxSlide = GetComponent<XRSlider>();
         compareToValue.text = compareToValueInt.ToString();

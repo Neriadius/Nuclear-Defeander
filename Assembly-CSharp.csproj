@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Logic\ExplodeScript.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRGripButton.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRKnob.cs" />
+    <Compile Include="Assets\Scripts\Logic\AmbientScript.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRKnob.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRJoystick.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\StepManager.cs" />
