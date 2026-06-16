@@ -290,5 +290,20 @@ namespace UnityEngine.XR.Content.Interaction
         {
             SetButtonHeight(0.0f);
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            var minimumHeight = -m_PressDistance;
+            if (other.gameObject.CompareTag("Interactable"))
+            {
+                Debug.Log("Button Pressed");
+                m_OnPress.Invoke();
+                SetButtonHeight(minimumHeight);
+                //UpdatePress();
+                //this.UpdatePress();
+
+                //ButtonPress();
+            }
+        }
     }
 }
