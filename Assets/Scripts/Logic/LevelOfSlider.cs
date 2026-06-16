@@ -9,16 +9,18 @@ public class LevelOfSlider : MonoBehaviour
     public TMP_Text textLevel;
     public TMP_Text compareToValue;
     public int compareToValueInt;
-    public Slider_logic_LED LED;
     public AudioSource click;
     public AudioSource bell;
-    public AudioSource explosion;
+    public GameObject[] lamps;
+    public GameObject ScoreCounter;
 
     private float level;
     private XRSlider boxSlide;
     private int intLevel;
     private int SliderValueStored;
+    private bool color;
     void Awake()
+
     {
         boxSlide = GetComponent<XRSlider>();
         compareToValue.text = compareToValueInt.ToString();
@@ -39,7 +41,7 @@ public class LevelOfSlider : MonoBehaviour
         if (intLevel != SliderValueStored)
         {
             CompareValues(intLevel, compareToValueInt);
-            LED.LampUpdate(intLevel);
+            LampUpdate(intLevel);
             click.Play();
             textLevel.text = intLevel.ToString();
         }
@@ -69,21 +71,53 @@ public class LevelOfSlider : MonoBehaviour
             return 0;
         }
     }
+    public void LampUpdate(int SliderValue)
+    {
+        if (SliderValue != SliderValueStored)
+        {
+            for (int i = 0; i < lamps.Length; i++)
+            {
+                if (i <= (SliderValue / 5))
+                {
+                    Light l = lamps[i].GetComponent<Light>();
+                    l.LightOn(color);
+                }
+                else
+                {
+                    Light l = lamps[i].GetComponent<Light>();
+                    l.LightOff();
+                }
+
+            }
+        }
+        SliderValueStored = SliderValue;
+    }
     IEnumerator Countdown()
     {
         bell.Play();
         compareToValueInt = RoundTo5((int)Random.Range(0, 100));
         compareToValue.text = compareToValueInt.ToString();
-        yield return new WaitForSeconds(Random.Range(15,25));
+        yield return new WaitForSeconds(Random.Range(20,30));
         if (CompareValues(intLevel, compareToValueInt) == 0)
         {
             StartCoroutine(Countdown());
         }
         else
         {
-            explosion.Play();
-            yield return new WaitForSeconds(17);
-            SceneManager.LoadScene(1);
+            color = true;
+            yield return new WaitForSeconds(10);
+            if (CompareValues(intLevel, compareToValueInt) == 0)
+            {
+                StartCoroutine(Countdown());
+            }
+            else
+            {
+                log log = new log();
+                log.massage = "To slow";
+                log.score = -50;
+                ScoreCounter.GetComponent<scoreObject>().AddScore(log);
+            }
+                
         }
     }
 }
