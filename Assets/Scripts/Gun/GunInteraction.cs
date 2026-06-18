@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -7,9 +8,13 @@ public class GunInteraction : MonoBehaviour
     [SerializeField] private LaserSight laserSight;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+    
+    [SerializeField]private TMP_Text AmmoText;
 
     [Header("Gun Settings")]
     [SerializeField] private float damage = 25f;
+    [SerializeField] private int maxAmmo = 6;
+    [SerializeField]private int curAmmo = 6;
     //private float nextFireTime = 0f;
 
     //void Start()
@@ -23,6 +28,8 @@ public class GunInteraction : MonoBehaviour
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         if (laserSight == null)
             laserSight = GetComponentInChildren<LaserSight>();
+        AmmoText.text = curAmmo.ToString();
+        
     }
 
     void OnEnable()
@@ -39,12 +46,39 @@ public class GunInteraction : MonoBehaviour
 
     public void TryShoot()
     {
+        if (curAmmo <= 0){
+            //play emptyChamberSound
+            Debug.Log("No Ammo");
+            return;
+        } else {
+            curAmmo--;
+            AmmoText.text = curAmmo.ToString();
+        }
+
+        // Checks if laser is hitting anything
         if (!laserSight.IsHitting) return;
 
         // Check if the object the laser is hitting has an Enemy component
         EnemyInteraction enemy = laserSight.CurrentHit.collider.GetComponent<EnemyInteraction>();
         if (enemy != null)
             enemy.TakeHit(damage);
+    }
+
+    public void Reload()
+    {
+        //play reload sound
+        curAmmo = maxAmmo;
+        AmmoText.text = curAmmo.ToString();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (curAmmo == maxAmmo) return;
+        if (collision.gameObject.CompareTag("Ammo"))
+        {
+            Reload();
+            Destroy(collision.gameObject);
+        }
     }
 
     public void HideLaser()

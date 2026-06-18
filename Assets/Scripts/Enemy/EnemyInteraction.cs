@@ -6,16 +6,21 @@ public class EnemyInteraction : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] public float speed = 5f;
+    [SerializeField] private RagdollHandler _ragdollHandler;
     private float currentHealth;
+    private Animator _animator;
 
     void Start()
     {
+        _animator = GetComponent<Animator>();
+        _ragdollHandler = GetComponent<RagdollHandler>();
+        _ragdollHandler.Initialize();
         currentHealth = maxHealth;
     }
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, Camera.main.transform.position) > 0.001f)
+        if (Vector3.Distance(transform.position, Camera.main.transform.position) > 0.01f)
         {
             // Moves enemy towards main while maintaining the same position.y
             Vector3 target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
@@ -79,6 +84,8 @@ public class EnemyInteraction : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} died.");
         // Here should be death logic
-        Destroy(gameObject);
+        _animator.enabled = false;
+        _ragdollHandler.Enable();
+        
     }
 }
