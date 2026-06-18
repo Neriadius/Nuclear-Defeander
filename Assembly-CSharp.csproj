@@ -87,6 +87,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoTimeScrubControl.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\BezierCurve.cs" />
+    <Compile Include="Assets\Scripts\Logic\GetResult.cs" />
     <Compile Include="Assets\Scripts\Logic\Exit.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRSlider.cs" />
     <Compile Include="Assets\Scripts\Logic\log.cs" />

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Content.Interaction;
 
 public class DoorClose : MonoBehaviour
@@ -8,7 +9,7 @@ public class DoorClose : MonoBehaviour
     public float leverUpSpeed = 0.2f;
     public float doorMaxPosition = 0.5f;
     public float doorMinPosition = 0f;
-    public GameObject Operator;
+    public scoreObject Operator;
 
     private bool isDoorClosed;
 
@@ -16,6 +17,7 @@ public class DoorClose : MonoBehaviour
 
     private void Awake()
     {
+        Operator = FindFirstObjectByType<scoreObject>();
         slider = GetComponent<XRSlider>();
     }
 
@@ -27,7 +29,7 @@ public class DoorClose : MonoBehaviour
         {
             Debug.Log("Door not closed");
             isDoorClosed = !isDoorClosed;
-            Operator.GetComponent<scoreObject>().doorCount -= 1;
+            Operator.doorCount -= 1;
             StartCoroutine(DoorMove(doorMaxPosition));
 
         }
@@ -35,7 +37,7 @@ public class DoorClose : MonoBehaviour
         {
             Debug.Log("Door closed");
             isDoorClosed = !isDoorClosed;
-            Operator.GetComponent<scoreObject>().doorCount += 1;
+            Operator.doorCount += 1;
             StartCoroutine(DoorMove(doorMinPosition));
         }
         

@@ -12,7 +12,7 @@ public class LevelOfSlider : MonoBehaviour
     public AudioSource click;
     public AudioSource bell;
     public GameObject[] lamps;
-    public GameObject ScoreCounter;
+    public scoreObject Operator;
 
     private float level;
     private XRSlider boxSlide;
@@ -22,6 +22,7 @@ public class LevelOfSlider : MonoBehaviour
     void Awake()
 
     {
+        Operator = FindFirstObjectByType<scoreObject>();
         boxSlide = GetComponent<XRSlider>();
         compareToValue.text = compareToValueInt.ToString();
         textLevel.text = intLevel.ToString();
@@ -113,7 +114,7 @@ public class LevelOfSlider : MonoBehaviour
             else
             {
                 log log = new log("To slow", -50);
-                ScoreCounter.GetComponent<scoreObject>().AddScore(log);
+                Operator.AddScore(log);
             }
                 
         }

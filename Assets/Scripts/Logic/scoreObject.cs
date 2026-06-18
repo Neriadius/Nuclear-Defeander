@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Content.Interaction;
 
 
 public class scoreObject : MonoBehaviour
@@ -12,9 +13,25 @@ public class scoreObject : MonoBehaviour
     public float total;
     public int doorCount;
 
+    private static GameObject Instance;
+
+    //public bool onlyOneTime = true;
+
+    private int scoreSave;
+    private int sceneIndex;
+
     private void Awake()
-    {
+    {        
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = gameObject;
         DontDestroyOnLoad(this.gameObject);
+
     }
 
     public void AddScore(log log)
@@ -32,6 +49,7 @@ public class scoreObject : MonoBehaviour
         }
         
     }
+
     public void TotalScore()
     {
         total = 0;
@@ -39,7 +57,18 @@ public class scoreObject : MonoBehaviour
     }
     void Update()
     {
-        DoorCounter();
+        if (SceneManager.GetActiveScene().buildIndex != sceneIndex)
+        {
+            TotalScore();
+            //onlyOneTime = false;
+            scoreSave = PlayerPrefs.GetInt("score");
+            scoreSave += (int)total;
+            PlayerPrefs.SetInt("score", scoreSave);
+            Debug.Log(PlayerPrefs.GetInt("score"));
+            logs.Clear();
+        }
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        DoorCounter(); 
     }
 
     void DoorCounter()
@@ -48,7 +77,7 @@ public class scoreObject : MonoBehaviour
         {
             doorCount = 0;
         }
-        else
+        else 
         {
             AddScore(new log("Doors", -0.5f * doorCount * Time.deltaTime));
         }
