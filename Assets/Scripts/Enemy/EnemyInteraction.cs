@@ -8,6 +8,7 @@ public class EnemyInteraction : MonoBehaviour
     [SerializeField] public float speed = 5f;
     [SerializeField] private RagdollHandler _ragdollHandler;
     private float currentHealth;
+    private bool isDead;
     private Animator _animator;
 
     void Start()
@@ -16,36 +17,39 @@ public class EnemyInteraction : MonoBehaviour
         _ragdollHandler = GetComponent<RagdollHandler>();
         _ragdollHandler.Initialize();
         currentHealth = maxHealth;
+        isDead = false;
     }
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, Camera.main.transform.position) > 0.01f)
-        {
-            // Moves enemy towards main while maintaining the same position.y
-            Vector3 target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
-            transform.position = Vector3.MoveTowards(
-                transform.position, 
-                target,
-                speed * Time.deltaTime
-            );
+        if (!isDead){
+            if (Vector3.Distance(transform.position, Camera.main.transform.position) > 0.01f)
+            {
+                // Moves enemy towards main while maintaining the same position.y
+                Vector3 target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
+                transform.position = Vector3.MoveTowards(
+                    transform.position, 
+                    target,
+                    speed * Time.deltaTime
+                );
 
-            // Determine which direction to rotate towards
-            Vector3 targetDirection = target - transform.position;
+                // Determine which direction to rotate towards
+                Vector3 targetDirection = target - transform.position;
 
-            // The step size is equal to speed times frame time.
-            float singleStep = speed * Time.deltaTime;
+                // The step size is equal to speed times frame time.
+                float singleStep = speed * Time.deltaTime;
 
-            // Rotate the forward vector towards the target direction by one step
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+                // Rotate the forward vector towards the target direction by one step
+                Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-            // Draw a ray pointing at our target in
-            Debug.DrawRay(transform.position, newDirection, Color.red);
+                // Draw a ray pointing at our target in
+                Debug.DrawRay(transform.position, newDirection, Color.red);
 
-            // Calculate a rotation a step closer to the target and applies rotation to this object
-            transform.rotation = Quaternion.LookRotation(newDirection);
-        } else {
-            AttackPlayer();
+                // Calculate a rotation a step closer to the target and applies rotation to this object
+                transform.rotation = Quaternion.LookRotation(newDirection);
+            } else {
+                AttackPlayer();
+            }
         }
     }
 
@@ -84,6 +88,7 @@ public class EnemyInteraction : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} died.");
         // Here should be death logic
+        isDead = true;
         _animator.enabled = false;
         _ragdollHandler.Enable();
         

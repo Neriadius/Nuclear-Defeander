@@ -4,6 +4,7 @@ using UnityEngine;
 public class LaserSight : MonoBehaviour
 {
     private LineRenderer lineRenderer;
+    private Renderer dotRenderer;
     public bool IsHitting { get; private set; }
     public RaycastHit CurrentHit { get; private set; }
     private bool isHidden = true;
@@ -14,8 +15,8 @@ public class LaserSight : MonoBehaviour
     [SerializeField] private LayerMask layersToHit;
 
     [Header("Optional Dot Effect")]
-    [SerializeField] private Transform laserDotPrefab;
-    private Transform instantiatedDot;
+    [SerializeField] private GameObject laserDotPrefab;
+    private GameObject instantiatedDot;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class LaserSight : MonoBehaviour
 
         if (laserDotPrefab != null)
             instantiatedDot = Instantiate(laserDotPrefab);
+        dotRenderer = instantiatedDot.GetComponent<Renderer>();
         HideLine();
     }
 
@@ -73,9 +75,9 @@ public class LaserSight : MonoBehaviour
             if (instantiatedDot != null)
             {
                 instantiatedDot.gameObject.SetActive(true);
-                instantiatedDot.position = hit.point;
+                instantiatedDot.transform.position = hit.point;
                 // Rotate so the dot faces outward along the surface normal
-                instantiatedDot.rotation = Quaternion.LookRotation(-hit.normal);
+                instantiatedDot.transform.rotation = Quaternion.LookRotation(-hit.normal);
             }
         }
         else
@@ -100,11 +102,15 @@ public class LaserSight : MonoBehaviour
     {
         isHidden = true;
         lineRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 0f));
+        dotRenderer.enabled = false;
+        //instantiatedDot.transform.position += new Vector3(0f,-50f,0f);
     }
 
     public void ShowLine()
     {
         isHidden = false;
         lineRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 1f));
+        dotRenderer.enabled = true;
+       // instantiatedDot.transform.position += new Vector3(0f,50f,0f);
     }
 }

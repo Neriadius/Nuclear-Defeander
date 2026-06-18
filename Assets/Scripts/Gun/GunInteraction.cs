@@ -1,3 +1,5 @@
+using System;
+using Assets.VFXPACK_IMPACT_WALLCOEUR.Scripts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -8,13 +10,21 @@ public class GunInteraction : MonoBehaviour
     [SerializeField] private LaserSight laserSight;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+    private AudioSource audioSource;
+    private Recoil recoil_script;
     
-    [SerializeField]private TMP_Text AmmoText;
+    [SerializeField] private TMP_Text AmmoText;
+    [SerializeField] private ParticleSystem VFXemitter;
 
     [Header("Gun Settings")]
     [SerializeField] private float damage = 25f;
     [SerializeField] private int maxAmmo = 6;
     [SerializeField]private int curAmmo = 6;
+
+    [Header("Gun Sounds")]
+    [SerializeField] private AudioClip fireSound;
+    [SerializeField] private AudioClip reloadSound;
+    [SerializeField] private AudioClip emptySound;
     //private float nextFireTime = 0f;
 
     //void Start()
@@ -26,6 +36,8 @@ public class GunInteraction : MonoBehaviour
     void Awake()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        audioSource = GetComponent<AudioSource>();
+        recoil_script = GetComponent<Recoil>();
         if (laserSight == null)
             laserSight = GetComponentInChildren<LaserSight>();
         AmmoText.text = curAmmo.ToString();
@@ -48,11 +60,15 @@ public class GunInteraction : MonoBehaviour
     {
         if (curAmmo <= 0){
             //play emptyChamberSound
+            audioSource.PlayOneShot(emptySound);
             Debug.Log("No Ammo");
             return;
         } else {
             curAmmo--;
             AmmoText.text = curAmmo.ToString();
+            VFXemitter.Play();
+            audioSource.PlayOneShot(fireSound);
+            recoil_script.DoRecoil();
         }
 
         // Checks if laser is hitting anything
@@ -69,6 +85,7 @@ public class GunInteraction : MonoBehaviour
         //play reload sound
         curAmmo = maxAmmo;
         AmmoText.text = curAmmo.ToString();
+        audioSource.PlayOneShot(reloadSound);
     }
 
     private void OnCollisionEnter(Collision collision)

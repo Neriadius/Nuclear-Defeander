@@ -75,6 +75,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoPlayerRenderTexture.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\BooleanToggleVisualsController.cs" />
+    <Compile Include="Assets\Scripts\Gun\Recoil.cs" />
     <Compile Include="Assets\Scripts\Gun\GunInteraction.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\AnchorVisuals.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Rotator.cs" />
