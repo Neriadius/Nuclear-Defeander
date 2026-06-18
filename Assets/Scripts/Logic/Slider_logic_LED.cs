@@ -4,16 +4,6 @@ public class Slider_logic_LED : MonoBehaviour
 {
     public GameObject[] lamps;
     private int SliderValueStored;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void LampUpdate(int SliderValue)
     {
         if (SliderValue != SliderValueStored)
@@ -23,7 +13,7 @@ public class Slider_logic_LED : MonoBehaviour
                 if (i <= (SliderValue / 5))
                 {
                     Light l = lamps[i].GetComponent<Light>();
-                    l.LightOn();
+                    //l.LightOn();
                 }
                 else
                 {

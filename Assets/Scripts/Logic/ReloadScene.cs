@@ -3,10 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class ReloadScene : MonoBehaviour
 {
-       
-        public void ReloadMainScene()
+    //public scoreObject Operator;
+
+    private void Awake()
     {
-                   SceneManager.LoadScene(0);
+        //Operator = FindFirstObjectByType<scoreObject>();
+    }
+
+    public void ReloadMainScene()
+    {
+        //Operator.onlyOneTime = true;
+        SceneManager.LoadScene(0);
+        
     }
     
 }

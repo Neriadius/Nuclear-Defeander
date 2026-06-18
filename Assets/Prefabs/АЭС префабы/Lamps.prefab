@@ -103,7 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &364042618905184877
 GameObject:
@@ -293,7 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &1264057222020323616
 GameObject:
@@ -398,7 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &1523233955965608261
 GameObject:
@@ -503,7 +506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &1657883433754330099
 GameObject:
@@ -608,7 +612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &2576052040197819240
 GameObject:
@@ -713,7 +718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &2740175010879108327
 GameObject:
@@ -818,7 +824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &3292083369964076175
 GameObject:
@@ -923,7 +930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &4925437348174601621
 GameObject:
@@ -1028,7 +1036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &5106412428683536768
 GameObject:
@@ -1133,7 +1142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &5714293561085764389
 GameObject:
@@ -1238,7 +1248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &7017963716330825725
 GameObject:
@@ -1343,7 +1354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &7173981523545116073
 GameObject:
@@ -1448,7 +1460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &7321105392536460061
 GameObject:
@@ -1553,7 +1566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &7563542987681814528
 GameObject:
@@ -1658,7 +1672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &7712652912409537710
 GameObject:
@@ -1763,7 +1778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &8392345669707266641
 GameObject:
@@ -1868,7 +1884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &8433427459416480045
 GameObject:
@@ -1973,7 +1990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &8650993027694704007
 GameObject:
@@ -2078,7 +2096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}
 --- !u!1 &8665097885779583739
 GameObject:
@@ -2183,5 +2202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9b550fc1082e4cbb3dcecb9b870e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Light
-  LightMaterial: {fileID: 2100000, guid: fb58706cca69b5b45b737b0d7ee55ec2, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: a9d555a6556791e419fe4387b176e954, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 70d07312178dc944d84eea7d55482790, type: 2}
   DarkMaterial: {fileID: 2100000, guid: 97c12cd6cd12a994cadf7f9582162f5a, type: 2}

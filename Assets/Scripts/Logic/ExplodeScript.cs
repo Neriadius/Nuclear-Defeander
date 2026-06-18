@@ -28,7 +28,7 @@ public class ExplodeScript : MonoBehaviour
         click.Play();
         explosion.Play();
         yield return new WaitForSeconds(explosionDelay);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 }
