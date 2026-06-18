@@ -3656,7 +3656,7 @@ PrefabInstance:
       objectReference: {fileID: 1385513344}
     - target: {fileID: 4160392325773843687, guid: ca56c6a761438904389dea58f66a33ea, type: 3}
       propertyPath: explosionDelay
-      value: 26
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8838059341339088186, guid: ca56c6a761438904389dea58f66a33ea, type: 3}
       propertyPath: m_LocalPosition.x
