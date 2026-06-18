@@ -112,9 +112,7 @@ public class LevelOfSlider : MonoBehaviour
             }
             else
             {
-                log log = new log();
-                log.massage = "To slow";
-                log.score = -50;
+                log log = new log("To slow", -50);
                 ScoreCounter.GetComponent<scoreObject>().AddScore(log);
             }
                 

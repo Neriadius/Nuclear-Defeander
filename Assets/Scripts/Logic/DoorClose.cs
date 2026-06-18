@@ -5,9 +5,10 @@ using UnityEngine.XR.Content.Interaction;
 public class DoorClose : MonoBehaviour
 {
     public GameObject door;
-    public float leverUpSpeed = 3f;
+    public float leverUpSpeed = 0.2f;
     public float doorMaxPosition = 0.5f;
     public float doorMinPosition = 0f;
+    public GameObject Operator;
 
     private bool isDoorClosed;
 
@@ -25,12 +26,16 @@ public class DoorClose : MonoBehaviour
         if (slider.value < 0.5 && isDoorClosed)
         {
             Debug.Log("Door not closed");
+            isDoorClosed = !isDoorClosed;
+            Operator.GetComponent<scoreObject>().doorCount -= 1;
             StartCoroutine(DoorMove(doorMaxPosition));
 
         }
         else if (slider.value >= 0.5 && !isDoorClosed)
         {
             Debug.Log("Door closed");
+            isDoorClosed = !isDoorClosed;
+            Operator.GetComponent<scoreObject>().doorCount += 1;
             StartCoroutine(DoorMove(doorMinPosition));
         }
         
@@ -41,16 +46,21 @@ public class DoorClose : MonoBehaviour
     {
         float vector;
         vector = (targetPosition - door.transform.position.y) / Mathf.Abs(targetPosition - door.transform.position.y);
-        door.transform.position = new Vector3 (door.transform.position.x, door.transform.position.y + vector * Time.deltaTime, door.transform.position.z);
+        door.transform.position = new Vector3 (door.transform.position.x, door.transform.position.y + vector * leverUpSpeed * Time.deltaTime, door.transform.position.z);
         yield return new WaitForSeconds(0.1f);
-        if (Mathf.Abs(door.transform.position.y) >= Mathf.Abs(targetPosition))
+        if (door.transform.position.y > targetPosition && !isDoorClosed)
         {
-            isDoorClosed = !isDoorClosed;
+
+        }
+         else if (door.transform.position.y < targetPosition && isDoorClosed)
+        {
+
         }
         else
         {
             StartCoroutine(DoorMove(targetPosition));
-        } 
+        }
+        
     }
 
 

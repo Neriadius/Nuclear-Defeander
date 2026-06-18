@@ -1,11 +1,14 @@
+using JetBrains.Annotations;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class scoreObject : MonoBehaviour
 {
     public List<log> logs = new List<log>();
-    public int total;
+    public float total;
+    public int doorCount;
     public void AddScore(log log)
     {
         int i = 0;
@@ -24,6 +27,10 @@ public class scoreObject : MonoBehaviour
     public void TotalScore()
     {
         total = 0;
-        foreach (var log in logs) { total = log.score; }
+        foreach (var log in logs) { total += log.score; }
+    }
+    void Update()
+    {
+        if(doorCount != 0) { AddScore(new log("Doors", -0.5f*doorCount*Time.deltaTime));  }
     }
 }

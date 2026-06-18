@@ -3,5 +3,10 @@ using NUnit.Framework.Interfaces;
 public class log
 {
     public string massage;
-    public int score;
+    public float score;
+    public log(string massage, float score)
+    {
+        this.massage = massage;
+        this.score = score;
+    }
 }
