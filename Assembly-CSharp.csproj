@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Gun\Recoil.cs" />
     <Compile Include="Assets\Scripts\Gun\GunInteraction.cs" />
     <Compile Include="Assets\Useless files\VFXPACK_IMPACT_WALLCOEUR_FreeVersion\Scripts\VfxController.cs" />
+    <Compile Include="Assets\Scripts\Logic\ValveLogic.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\AnchorVisuals.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoTimeScrubControl.cs" />
