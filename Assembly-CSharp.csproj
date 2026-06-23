@@ -10,7 +10,6 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{84BBBD50-DA65-4880-32DB-D414C93A0249}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,6 +63,7 @@
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRLever.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\Scripts\Logic\ReloadScene.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
     <Compile Include="Assets\Scripts\Logic\PhysicInteractionPushButton.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
@@ -71,7 +71,10 @@
     <Compile Include="Assets\Scripts\Logic\scoreObject.cs" />
     <Compile Include="Assets\Scripts\Gun\LaserSight.cs" />
     <Compile Include="Assets\Scripts\Gun\FollowTransform.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Useless files\VFXPACK_IMPACT_WALLCOEUR_FreeVersion\Scripts\DropdownController.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\Рычаги и прочее\Light.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\HandSubsystemManager.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Callout.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRKnob.cs" />
     <Compile Include="Assets\Scripts\Рычаги и прочее\XRJoystick.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\StepManager.cs" />
+    <Compile Include="Assets\Scripts\Gun\TestRecoil.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoPlayerRenderTexture.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
@@ -90,7 +94,11 @@
     <Compile Include="Assets\Scripts\Logic\DoorClose.cs" />
     <Compile Include="Assets\Scripts\Gun\Recoil.cs" />
     <Compile Include="Assets\Scripts\Gun\GunInteraction.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Useless files\VFXPACK_IMPACT_WALLCOEUR_FreeVersion\Scripts\VfxController.cs" />
+=======
+    <Compile Include="Assets\Scripts\Enemy\SpawnerManager.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\AnchorVisuals.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoTimeScrubControl.cs" />
@@ -1959,6 +1967,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
       <Project>{CB96F6F2-93E7-592F-62B8-975C0F42EB9A}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
@@ -1987,6 +1996,26 @@
       <Project>{8B951BA9-7360-DF48-53CF-1266F333236A}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator</Name>
     </ProjectReference>
+=======
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj" />
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.csproj" />
+    <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj" />
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator.Editor.csproj" />
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj" />
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.Editor.csproj" />
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator.csproj" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
