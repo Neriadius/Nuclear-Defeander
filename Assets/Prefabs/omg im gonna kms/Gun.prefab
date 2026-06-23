@@ -49,7 +49,7 @@ MonoBehaviour:
   layersToHit:
     serializedVersion: 2
     m_Bits: 4294967295
-  laserDotPrefab: {fileID: 8973989818033259313, guid: 097ffc89362063c49b3e01e24025af96, type: 3}
+  laserDotPrefab: {fileID: 3280938654870641298, guid: 097ffc89362063c49b3e01e24025af96, type: 3}
 --- !u!120 &5752878979120934999
 LineRenderer:
   serializedVersion: 3
@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 194287195436436994}
   - component: {fileID: 2021894046045666032}
   - component: {fileID: 4026053154505504676}
+  - component: {fileID: 5694853495280809933}
   - component: {fileID: 5698365070882839964}
   m_Layer: 0
   m_Name: Gun
@@ -517,7 +518,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
+  m_ThrowVelocityScale: 3
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
@@ -548,8 +549,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2605391, y: 0.22803119, z: 0.05283261}
-  m_Center: {x: 0.004211992, y: 0.023703234, z: -0.0058551687}
+  m_Size: {x: 0.060565695, y: 0.22803119, z: 0.23551771}
+  m_Center: {x: 0.00046771765, y: 0.023703232, z: -0.0036027692}
 --- !u!114 &4026053154505504676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +572,20 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: 9db49d78ac4040d49a99971e43ab2be3, type: 3}
   reloadSound: {fileID: 8300000, guid: aca6add3af7a3204eb59be5dafb5843c, type: 3}
   emptySound: {fileID: 8300000, guid: 9de8554067d481f4a84aa731bf25fede, type: 3}
+--- !u!114 &5694853495280809933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4123634448410220797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c497bee31a67340498a958ce99b67a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  recoilX: -40
+  timeToReturn: 4
 --- !u!82 &5698365070882839964
 AudioSource:
   m_ObjectHideFlags: 0

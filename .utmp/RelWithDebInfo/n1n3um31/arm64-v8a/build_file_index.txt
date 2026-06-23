@@ -1,0 +1,2 @@
+S:\Unity projects\Testing\Nuclear Defeander\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+S:\Unity projects\Testing\Nuclear Defeander\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
