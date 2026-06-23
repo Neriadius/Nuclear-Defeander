@@ -1,40 +1,67 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 public class EnemyInteraction : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] public float speed = 5f;
+    [SerializeField] private List<Transform> enemyPath;
     [SerializeField] private RagdollHandler _ragdollHandler;
     private float currentHealth;
     private bool isDead;
+    private int currentTargetIndex;
+    private Vector3 target;
     private Animator _animator;
+    private Collider collider;
+    public scoreObject Operator;
 
     void Start()
     {
+        Operator = FindFirstObjectByType<scoreObject>();
         _animator = GetComponent<Animator>();
+        collider = GetComponent<Collider>();
         _ragdollHandler = GetComponent<RagdollHandler>();
+
         _ragdollHandler.Initialize();
         currentHealth = maxHealth;
+        currentTargetIndex = 0;
         isDead = false;
     }
 
     void Update()
     {
         if (!isDead){
-            if (Vector3.Distance(transform.position, Camera.main.transform.position) > 0.01f)
+            if (currentTargetIndex == enemyPath.Count)
+            {
+                target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
+            } else {
+                target = enemyPath[currentTargetIndex].position;
+                target.y = transform.position.y;   
+            }
+
+            if (Vector3.Distance(transform.position, target) > 0.8f)
             {
                 // Moves enemy towards main while maintaining the same position.y
-                Vector3 target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
-                transform.position = Vector3.MoveTowards(
-                    transform.position, 
-                    target,
-                    speed * Time.deltaTime
-                );
+                //target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
 
                 // Determine which direction to rotate towards
                 Vector3 targetDirection = target - transform.position;
+
+                // Only move if no wall is directly ahead
+                if (!Physics.Raycast(transform.position, targetDirection, 0.5f))
+                {
+                    transform.position = Vector3.MoveTowards(
+                        transform.position,
+                        target,
+                        speed * Time.deltaTime
+                    );
+                }
+
+                //_rb.linearVelocity = targetDirection.normalized * speed;
 
                 // The step size is equal to speed times frame time.
                 float singleStep = speed * Time.deltaTime;
@@ -47,7 +74,10 @@ public class EnemyInteraction : MonoBehaviour
 
                 // Calculate a rotation a step closer to the target and applies rotation to this object
                 transform.rotation = Quaternion.LookRotation(newDirection);
-            } else {
+            } else if (currentTargetIndex != enemyPath.Count){
+                currentTargetIndex++;
+            } else
+            {
                 AttackPlayer();
             }
         }
@@ -55,11 +85,12 @@ public class EnemyInteraction : MonoBehaviour
 
     public void TakeHit(float damage)
     {
+        if (isDead) return;
         currentHealth -= damage;
         Debug.Log($"{gameObject.name} hit! HP: {currentHealth}/{maxHealth}");
 
         if (currentHealth <= 0)
-            Die();
+            StartCoroutine(Die());
     }
 
     /*IEnumerator MoveToPlayer(Vector3 targetPosition, float moveSpeed)
@@ -82,15 +113,28 @@ public class EnemyInteraction : MonoBehaviour
     private void AttackPlayer()
     {
         Debug.Log("Player Ded");
+        SceneManager.LoadScene(2);
     }
 
-    private void Die()
+    public void SetPath(List<Transform> newPath)
+    {
+        enemyPath = newPath;
+        currentTargetIndex = 0;
+    }
+
+    IEnumerator Die()
     {
         Debug.Log($"{gameObject.name} died.");
         // Here should be death logic
         isDead = true;
         _animator.enabled = false;
         _ragdollHandler.Enable();
+        collider.enabled = false;
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(gameObject);
+        Operator.AddScore(new log("Walker felled", 50));
         
     }
 }

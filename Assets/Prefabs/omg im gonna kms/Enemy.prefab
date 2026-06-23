@@ -49,7 +49,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   maxHealth: 100
-  speed: 0.25
+  speed: 3
+  enemyPath:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _ragdollHandler: {fileID: 0}
 --- !u!136 &3856320410794319114
 CapsuleCollider:
@@ -598,7 +602,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2426112226642584881}
   serializedVersion: 5
-  m_Mass: 3.75
+  m_Mass: 0.375
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -699,7 +703,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3989816495331622130}
   serializedVersion: 5
-  m_Mass: 3.75
+  m_Mass: 0.375
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -901,7 +905,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835346923319514042}
   serializedVersion: 5
-  m_Mass: 3.75
+  m_Mass: 0.375
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1002,7 +1006,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6846748001048484759}
   serializedVersion: 5
-  m_Mass: 3.75
+  m_Mass: 0.375
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1101,7 +1105,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7005596720014605569}
   serializedVersion: 5
-  m_Mass: 6.25
+  m_Mass: 0.625
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1306,7 +1310,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8900395357467348912}
   serializedVersion: 5
-  m_Mass: 6.25
+  m_Mass: 0.625
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

@@ -28,12 +28,13 @@ public class Recoil : MonoBehaviour
         float elapsedTime = 0f;
 
         while (elapsedTime < timeToMove)
-        { 
-        Quaternion targetRotation = Quaternion.Euler(transform.localRotation.x - recoilX * elapsedTime/timeToMove,transform.localRotation.y,transform.localRotation.z);
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime);
+        {
+            Debug.Log("Recoil progress:" + elapsedTime/timeToMove);
+            Quaternion targetRotation = Quaternion.Euler(transform.localRotation.x - recoilX * (elapsedTime/timeToMove),transform.localRotation.y,transform.localRotation.z);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime);
 
-        elapsedTime += Time.deltaTime;
-        yield return null;
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 
