@@ -96,11 +96,14 @@ public class LevelOfSlider : MonoBehaviour
     IEnumerator Countdown()
     {
         bell.Play();
+        color = false;
         compareToValueInt = RoundTo5((int)Random.Range(0, 100));
         compareToValue.text = compareToValueInt.ToString();
         yield return new WaitForSeconds(Random.Range(20,30));
         if (CompareValues(intLevel, compareToValueInt) == 0)
         {
+            log log = new log("GOOD", +50);
+            Operator.AddScore(log);
             StartCoroutine(Countdown());
         }
         else
@@ -109,11 +112,13 @@ public class LevelOfSlider : MonoBehaviour
             yield return new WaitForSeconds(10);
             if (CompareValues(intLevel, compareToValueInt) == 0)
             {
+                log log = new log("OK", +20);
+                Operator.AddScore(log);
                 StartCoroutine(Countdown());
             }
             else
             {
-                log log = new log("To slow", -50);
+                log log = new log("Too slow", -50);
                 Operator.AddScore(log);
             }
                 
