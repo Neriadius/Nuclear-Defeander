@@ -4,6 +4,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Unity.Android.Gradle;
 
 public class EnemyInteraction : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class EnemyInteraction : MonoBehaviour
     [SerializeField] private RagdollHandler _ragdollHandler;
     public float currentHealth;
     private bool isDead;
+    private bool isDying;
     private int currentTargetIndex;
     private Vector3 target;
     private Animator _animator;
@@ -30,6 +32,19 @@ public class EnemyInteraction : MonoBehaviour
         currentHealth = maxHealth;
         currentTargetIndex = 0;
         isDead = false;
+        isDying = false;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Door"))
+        {
+            if(!isDying && !isDead)
+            {
+                StartCoroutine(DoorBlocked());
+            }
+            isDying = true;
+        }
     }
 
     void Update()
@@ -119,5 +134,13 @@ public class EnemyInteraction : MonoBehaviour
         Destroy(gameObject);
         Operator.AddScore(new log("Walker felled", 50));
         
+    }
+
+    IEnumerator DoorBlocked()
+    {
+        Debug.Log("${gameObject.name} blocked by door");
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
+        Debug.Log("${gameObject} died from blocked door");
     }
 }

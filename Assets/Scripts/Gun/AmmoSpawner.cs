@@ -24,6 +24,7 @@ public class AmmoSpawner : MonoBehaviour
         if (SpawnerMagCount > 0){
             Instantiate(AmmoPrefab,AmmoPos,Quaternion.Euler(0f,0f,90f));
             SpawnerMagCount--;
+            PlayerPrefs.SetInt("SpawnerMagCount",SpawnerMagCount);
             Debug.Log("SpawnerMagCount:" + SpawnerMagCount);
         }
     }
@@ -61,6 +62,7 @@ public class AmmoSpawner : MonoBehaviour
         if (SpawnerMagCount > 0){
             Instantiate(AmmoPrefab,AmmoPos,transform.rotation);
             SpawnerMagCount--;
+            PlayerPrefs.SetInt("SpawnerMagCount",SpawnerMagCount);
             Debug.Log("SpawnerMagCount:" + SpawnerMagCount);
         }
     }
