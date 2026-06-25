@@ -10,6 +10,10 @@ public class SpawnerManager : MonoBehaviour
     void Awake()
     {
         enemySpawners = FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None);
+    }
+
+    void Start()
+    {
         StartCoroutine(Cooldown());
     }
 
