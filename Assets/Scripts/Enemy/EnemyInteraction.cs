@@ -35,20 +35,11 @@ public class EnemyInteraction : MonoBehaviour
         isDying = false;
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Door"))
-        {
-            if(!isDying && !isDead)
-            {
-                StartCoroutine(DoorBlocked());
-            }
-            isDying = true;
-        }
-    }
-
     void Update()
     {
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
         if (!isDead){
             if (currentTargetIndex == enemyPath.Count)
             {
@@ -66,8 +57,19 @@ public class EnemyInteraction : MonoBehaviour
                 // Determine which direction to rotate towards
                 Vector3 targetDirection = target - transform.position;
 
-                // Only move if no wall is directly ahead
-                if (!Physics.Raycast(transform.position, targetDirection, 0.5f))
+
+                if(Physics.Raycast(ray, out hit, 1.5f))
+                {
+                    if (hit.collider.CompareTag("Door"))
+                    {
+                        Debug.Log("Ray collided with door");
+                        if(!isDying && !isDead)
+                        {
+                            StartCoroutine(DoorBlocked());
+                        }
+                        isDying = true;
+                    }
+                } else
                 {
                     transform.position = Vector3.MoveTowards(
                         transform.position,
@@ -75,6 +77,18 @@ public class EnemyInteraction : MonoBehaviour
                         speed * Time.deltaTime
                     );
                 }
+
+
+
+                // Only move if no wall is directly ahead
+                /*if (!Physics.Raycast(transform.position, targetDirection, 0.48f))
+                {
+                    transform.position = Vector3.MoveTowards(
+                        transform.position,
+                        target,
+                        speed * Time.deltaTime
+                    );
+                }*/
 
                 //_rb.linearVelocity = targetDirection.normalized * speed;
 
