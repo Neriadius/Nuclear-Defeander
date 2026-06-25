@@ -11,7 +11,7 @@ public class EnemyInteraction : MonoBehaviour
     [SerializeField] public float speed = 5f;
     [SerializeField] private List<Transform> enemyPath;
     [SerializeField] private RagdollHandler _ragdollHandler;
-    private float currentHealth;
+    public float currentHealth;
     private bool isDead;
     private int currentTargetIndex;
     private Vector3 target;

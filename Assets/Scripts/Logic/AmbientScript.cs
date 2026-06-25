@@ -17,7 +17,7 @@ public class AmbientScript : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
         
-        audioSource.clip = ambientSounds[Random.Range(0, ambientSounds.Length)];
+        audioSource.clip = ambientSounds[Random.Range(0, ambientSounds.Length - 1)];
         audioSource.Play();
 
         yield return new WaitForSeconds(audioSource.clip.length);

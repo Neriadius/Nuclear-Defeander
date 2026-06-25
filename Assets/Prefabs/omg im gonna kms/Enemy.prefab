@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 3856320410794319114}
   - component: {fileID: 5573228373223099001}
   - component: {fileID: 8768246259494199863}
+  - component: {fileID: 444127371362644198}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -185,6 +186,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _ragdollHandler: {fileID: 0}
+  currentHealth: 0
   Operator: {fileID: 0}
 --- !u!136 &3856320410794319114
 CapsuleCollider:
@@ -243,6 +245,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85a87fb15c571f43817dd445ccddbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &444127371362644198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262758638095552186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c4e2d18dd936941b8dacd1aaf24012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  zombieGrowls:
+  - {fileID: 8300000, guid: 889f99ec9df0a7746ad5b01e37fdeca3, type: 3}
+  - {fileID: 8300000, guid: 6c2c9bbf30383d245a19423d0c12ae91, type: 3}
+  - {fileID: 8300000, guid: f68dc999763411247b35345564a48f5b, type: 3}
+  zombieDeaths:
+  - {fileID: 8300000, guid: 2e9ec5fc100c8e9458210cd88f351a2d, type: 3}
+  AudioSource: {fileID: 6934708188816649267}
 --- !u!1001 &8395148373548356026
 PrefabInstance:
   m_ObjectHideFlags: 0

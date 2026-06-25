@@ -70,6 +70,7 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Scripts\Enemy\RagdollHandler.cs" />
     <Compile Include="Assets\Scripts\Logic\scoreObject.cs" />
+    <Compile Include="Assets\Scripts\Logic\ZombieSounds.cs" />
     <Compile Include="Assets\Scripts\Gun\LaserSight.cs" />
     <Compile Include="Assets\Scripts\Gun\FollowTransform.cs" />
     <Compile Include="Assets\Useless files\VFXPACK_IMPACT_WALLCOEUR_FreeVersion\Scripts\DropdownController.cs" />
