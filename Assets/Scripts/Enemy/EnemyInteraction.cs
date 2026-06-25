@@ -4,6 +4,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Unity.Android.Gradle;
 
 public class EnemyInteraction : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class EnemyInteraction : MonoBehaviour
     [SerializeField] private RagdollHandler _ragdollHandler;
     public float currentHealth;
     private bool isDead;
+    private bool isDying;
     private int currentTargetIndex;
     private Vector3 target;
     private Animator _animator;
@@ -30,10 +32,14 @@ public class EnemyInteraction : MonoBehaviour
         currentHealth = maxHealth;
         currentTargetIndex = 0;
         isDead = false;
+        isDying = false;
     }
 
     void Update()
     {
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
         if (!isDead){
             if (currentTargetIndex == enemyPath.Count)
             {
@@ -51,8 +57,19 @@ public class EnemyInteraction : MonoBehaviour
                 // Determine which direction to rotate towards
                 Vector3 targetDirection = target - transform.position;
 
-                // Only move if no wall is directly ahead
-                if (!Physics.Raycast(transform.position, targetDirection, 0.5f))
+
+                if(Physics.Raycast(ray, out hit, 1.5f))
+                {
+                    if (hit.collider.CompareTag("Door"))
+                    {
+                        Debug.Log("Ray collided with door");
+                        if(!isDying && !isDead)
+                        {
+                            StartCoroutine(DoorBlocked());
+                        }
+                        isDying = true;
+                    }
+                } else
                 {
                     transform.position = Vector3.MoveTowards(
                         transform.position,
@@ -60,6 +77,18 @@ public class EnemyInteraction : MonoBehaviour
                         speed * Time.deltaTime
                     );
                 }
+
+
+
+                // Only move if no wall is directly ahead
+                /*if (!Physics.Raycast(transform.position, targetDirection, 0.48f))
+                {
+                    transform.position = Vector3.MoveTowards(
+                        transform.position,
+                        target,
+                        speed * Time.deltaTime
+                    );
+                }*/
 
                 //_rb.linearVelocity = targetDirection.normalized * speed;
 
@@ -119,5 +148,13 @@ public class EnemyInteraction : MonoBehaviour
         Destroy(gameObject);
         Operator.AddScore(new log("Walker felled", 50));
         
+    }
+
+    IEnumerator DoorBlocked()
+    {
+        Debug.Log("${gameObject.name} blocked by door");
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
+        Debug.Log("${gameObject} died from blocked door");
     }
 }
