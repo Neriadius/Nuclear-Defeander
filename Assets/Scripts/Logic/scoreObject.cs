@@ -22,6 +22,10 @@ public class scoreObject : MonoBehaviour
     private void Awake()
     {        
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        for (int i  = 0; i <= PlayerPrefs.GetInt("lvl"); i++)
+        {
+            objects[i].SetActive(true);
+        }
         if (Instance != null)
         {
             Destroy(gameObject);
@@ -30,10 +34,8 @@ public class scoreObject : MonoBehaviour
 
         Instance = gameObject;
         DontDestroyOnLoad(this.gameObject);
-        for (int i  = 0; i <= PlayerPrefs.GetInt("lvl"); i++)
-        {
-            objects[i].SetActive(true);
-        }
+        
+        PlayerPrefs.SetInt("SpawnerMagCount",10);
     }
 
     public void AddScore(log log)

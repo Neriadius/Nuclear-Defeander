@@ -350,7 +350,7 @@ MonoBehaviour:
   - {fileID: -3050454764681763776}
   - {fileID: 5162801104886915698}
   - {fileID: -1260514073211609400}
-  - {fileID: 7952895681769724906}
+  - {fileID: -4574178051960889219}
   - {fileID: -6477115229853301483}
   customLoaderName: 
   m_renderMode: 1
@@ -527,6 +527,28 @@ MonoBehaviour:
   targetOpenXRApiVersion: 
   required: 0
   customRuntimeLoaderName: 
+--- !u!114 &-4574178051960889219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b213d3e3c7f3109449eb46a4c8ee42f0, type: 3}
+  m_Name: XrPerformanceSettingsFeature Android
+  m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Extensions.PerformanceSettings.XrPerformanceSettingsFeature
+  m_enabled: 0
+  nameUi: XR Performance Settings
+  version: 1.0.0
+  featureIdInternal: com.unity.openxr.feature.extension.performance_settings
+  openxrExtensionStrings: XR_EXT_performance_settings
+  company: Unity
+  priority: 0
+  targetOpenXRApiVersion: 
+  required: 0
+  customRuntimeLoaderName: 
 --- !u!114 &-4534470796915507945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,62 +606,62 @@ MonoBehaviour:
   m_Name: Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.OpenXRSettings
   features:
-  - {fileID: 8556952776668765361}
-  - {fileID: 5245989399374424440}
-  - {fileID: 8629628831726786648}
-  - {fileID: 8259712369087012123}
-  - {fileID: 2925241460776693744}
-  - {fileID: -298331947912983140}
-  - {fileID: 1847023142796485832}
-  - {fileID: 11336087417652066}
-  - {fileID: 6373086691286537765}
-  - {fileID: 3412719378422883273}
-  - {fileID: 5189437538543608256}
-  - {fileID: -4374363524115788785}
-  - {fileID: 4867283453711649263}
-  - {fileID: -1189465772540843129}
-  - {fileID: 4372388076508233615}
-  - {fileID: 2646965778924426374}
-  - {fileID: -7685018053069178102}
-  - {fileID: -7452640750188994134}
-  - {fileID: 6079079172035813013}
-  - {fileID: 43786309767967551}
-  - {fileID: 4341580822583729862}
-  - {fileID: 5205068700392874199}
-  - {fileID: -7460420956981445325}
-  - {fileID: -7562699198874706946}
-  - {fileID: -1262859425182577413}
-  - {fileID: 5296973315334710680}
-  - {fileID: -5662505423408948228}
-  - {fileID: 766033199368030524}
-  - {fileID: 2099717684801223403}
-  - {fileID: -7758488439918910628}
-  - {fileID: 5639264063130607796}
-  - {fileID: 3691234898583063608}
-  - {fileID: 4184425692469896467}
-  - {fileID: -7809607632838213643}
-  - {fileID: -3636772177034450885}
-  - {fileID: -8570033716704233356}
-  - {fileID: -8497722996903478199}
-  - {fileID: -9047948013806265643}
-  - {fileID: 2250780907473375756}
-  - {fileID: 7580886114493625412}
-  - {fileID: -8762988420335788950}
-  - {fileID: -3342273526683822050}
-  - {fileID: 5609457374837371668}
-  - {fileID: 2138620344660498167}
-  - {fileID: 8040294414025793327}
-  - {fileID: -3274206137852306854}
-  - {fileID: -289070040714221905}
-  - {fileID: -6695529736678321489}
-  - {fileID: -1035607464070001903}
-  - {fileID: -6974156502834827168}
-  - {fileID: -8603117657474737516}
-  - {fileID: -1588806320048353734}
-  - {fileID: -6907151096258843593}
-  - {fileID: 5865666278297908078}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -4574178051960889219}
-  - {fileID: 1472817054032119873}
+  - {fileID: 0}
   customLoaderName: 
   m_renderMode: 1
   m_latencyOptimization: 0
@@ -655,28 +677,6 @@ MonoBehaviour:
   m_hasMigratedMultiviewRenderRegionSetting: 1
   m_foveatedRenderingApi: 0
   m_useOpenXRPredictedTime: 0
---- !u!114 &-4574178051960889219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b213d3e3c7f3109449eb46a4c8ee42f0, type: 3}
-  m_Name: XrPerformanceSettingsFeature Android
-  m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Extensions.PerformanceSettings.XrPerformanceSettingsFeature
-  m_enabled: 0
-  nameUi: Valve Index Controller Profile
-  version: 0.0.1
-  featureIdInternal: com.unity.openxr.feature.input.valveindex
-  openxrExtensionStrings: 
-  company: Unity
-  priority: 0
-  targetOpenXRApiVersion: 
-  required: 0
-  customRuntimeLoaderName: 
 --- !u!114 &-4197151011618414416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,6 +1063,28 @@ MonoBehaviour:
   customRuntimeLoaderName: 
   cacheSize: 1048576
   perThreadCacheSize: 51200
+--- !u!114 &-794565095204285094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6ccd3d0ef0f1d458e69421dccbdae1, type: 3}
+  m_Name: ValveIndexControllerProfile Standalone
+  m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
+  m_enabled: 0
+  nameUi: Valve Index Controller Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.valveindex
+  openxrExtensionStrings: 
+  company: Unity
+  priority: 0
+  targetOpenXRApiVersion: 
+  required: 0
+  customRuntimeLoaderName: 
 --- !u!114 &-756037850018429380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,7 +1629,7 @@ MonoBehaviour:
   - {fileID: 761181553511431403}
   - {fileID: 8385464922012021632}
   - {fileID: 340718327877528129}
-  - {fileID: -4213607584088765833}
+  - {fileID: -794565095204285094}
   - {fileID: 2418629861899017092}
   - {fileID: 561935633682507001}
   customLoaderName: 

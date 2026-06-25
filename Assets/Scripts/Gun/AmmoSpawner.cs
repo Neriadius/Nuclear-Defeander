@@ -13,16 +13,24 @@ public class AmmoSpawner : MonoBehaviour
     {
         AmmoPos = transform.position;
         AmmoPos.y += 0.4f;
-        Instantiate(AmmoPrefab,AmmoPos,transform.rotation);
+        if (PlayerPrefs.HasKey("SpawnerMagCount"))
+        {
+            SpawnerMagCount = PlayerPrefs.GetInt("SpawnerMagCount");
+        }
+        else
+        {
+            Debug.Log("SpawnerMagCount not found");
+        }
+        if (SpawnerMagCount > 0){
+            Instantiate(AmmoPrefab,AmmoPos,Quaternion.Euler(0f,0f,90f));
+            SpawnerMagCount--;
+            Debug.Log("SpawnerMagCount:" + SpawnerMagCount);
+        }
     }
 
     void Awake()
     {
         socketInteractor = GetComponent<XRSocketInteractor>();
-        if (PlayerPrefs.HasKey("SpawnerMagCount"))
-        {
-            SpawnerMagCount = PlayerPrefs.GetInt("SpawnerMagCount");
-        }
     }
 
     void OnEnable()
@@ -48,8 +56,12 @@ public class AmmoSpawner : MonoBehaviour
         // Hide when released back into the world or into a socket
         //if (args.interactorObject is not UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor)
         //    laserSight.HideLine();
+        AmmoPos = transform.position;
+        AmmoPos.y += 0.4f;
         if (SpawnerMagCount > 0){
             Instantiate(AmmoPrefab,AmmoPos,transform.rotation);
+            SpawnerMagCount--;
+            Debug.Log("SpawnerMagCount:" + SpawnerMagCount);
         }
     }
 
