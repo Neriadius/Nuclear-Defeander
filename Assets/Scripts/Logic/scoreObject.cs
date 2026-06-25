@@ -12,10 +12,9 @@ public class scoreObject : MonoBehaviour
     public List<log> logs = new List<log>();
     public float total;
     public int doorCount;
-
+    public GameObject[] objects;
     private static GameObject Instance;
 
-    //public bool onlyOneTime = true;
 
     private int scoreSave;
     private int sceneIndex;
@@ -31,7 +30,10 @@ public class scoreObject : MonoBehaviour
 
         Instance = gameObject;
         DontDestroyOnLoad(this.gameObject);
-
+        for (int i  = 0; i <= PlayerPrefs.GetInt("lvl"); i++)
+        {
+            objects[i].SetActive(true);
+        }
     }
 
     public void AddScore(log log)
@@ -60,12 +62,15 @@ public class scoreObject : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex != sceneIndex)
         {
             TotalScore();
-            //onlyOneTime = false;
             scoreSave = PlayerPrefs.GetInt("score");
-            scoreSave += (int)total;
+            if (SceneManager.GetActiveScene().buildIndex == 2) { 
+                scoreSave += (int)total;
+                PlayerPrefs.SetInt("lvl", PlayerPrefs.GetInt("lvl")+1);
+            }
             PlayerPrefs.SetInt("score", scoreSave);
             Debug.Log(PlayerPrefs.GetInt("score"));
             logs.Clear();
+
         }
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         DoorCounter(); 
