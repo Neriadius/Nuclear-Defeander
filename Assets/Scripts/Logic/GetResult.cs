@@ -6,7 +6,7 @@ public class GetResult : MonoBehaviour
     public scoreObject scoreManager;
     public TMP_Text resultText;
     public TMP_Text valueText;
-
+    public TMP_Text totalText;
     private void Awake()
     {
         scoreManager = FindFirstObjectByType<scoreObject>();
@@ -17,7 +17,10 @@ public class GetResult : MonoBehaviour
             valueText.text += score.ToString() + "\n";
         }
     }
-
+    private void Update()
+    {
+        totalText.text = PlayerPrefs.GetInt("score").ToString();
+    }
 
 
     void DisplayResults()
