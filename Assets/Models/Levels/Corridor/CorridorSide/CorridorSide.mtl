@@ -1,0 +1,14 @@
+# Blender 5.1.2 MTL File: 'room.blend'
+# www.blender.org
+
+newmtl frames
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Temirlan/Documents/Adobe/Adobe Substance 3D Painter/export/DoorFrame/DoorFrame_DefaultMaterial_BaseColor.png
+map_Ns C:/Users/Temirlan/Documents/Adobe/Adobe Substance 3D Painter/export/DoorFrame/DoorFrame_DefaultMaterial_Roughness.png
+map_refl C:/Users/Temirlan/Documents/Adobe/Adobe Substance 3D Painter/export/DoorFrame/DoorFrame_DefaultMaterial_Metallic.png
+map_Ke C:/Users/Temirlan/Documents/Adobe/Adobe Substance 3D Painter/export/DoorFrame/DoorFrame_DefaultMaterial_Emissive.png
+map_Bump -bm 1.000000 C:/Users/Temirlan/Documents/Adobe/Adobe Substance 3D Painter/export/DoorFrame/DoorFrame_DefaultMaterial_Normal.png
