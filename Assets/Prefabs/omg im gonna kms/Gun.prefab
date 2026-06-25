@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 843950015364477090}
   - component: {fileID: 1667511412724172824}
   - component: {fileID: 4601119830182668386}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,8 +310,9 @@ GameObject:
   - component: {fileID: 194287195436436994}
   - component: {fileID: 2021894046045666032}
   - component: {fileID: 4026053154505504676}
-  - component: {fileID: 5694853495280809933}
+  - component: {fileID: 3374633888879451293}
   - component: {fileID: 5698365070882839964}
+  - component: {fileID: 2807555666920206091}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -572,20 +573,20 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: 9db49d78ac4040d49a99971e43ab2be3, type: 3}
   reloadSound: {fileID: 8300000, guid: aca6add3af7a3204eb59be5dafb5843c, type: 3}
   emptySound: {fileID: 8300000, guid: 9de8554067d481f4a84aa731bf25fede, type: 3}
---- !u!114 &5694853495280809933
+--- !u!114 &3374633888879451293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4123634448410220797}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c497bee31a67340498a958ce99b67a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  recoilX: -40
-  timeToReturn: 4
+  recoilX: -20
+  timeToReturn: 1
 --- !u!82 &5698365070882839964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -683,6 +684,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2807555666920206091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4123634448410220797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2758cdb943904af4196b146aeb906331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  recoilX: 5
+  kickTime: 0.04
+  timeToReturn: 0.25
 --- !u!1 &4278817271518649507
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +711,7 @@ GameObject:
   - component: {fileID: 3803895311244639583}
   - component: {fileID: 1740993465570290074}
   - component: {fileID: 5372017994652518828}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,13 +988,81 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7987190230063565692, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5769313132868873543, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4382185334076421429, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4381681093092847957, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3801076084171172080, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3397342676485384708, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2932912166393624176, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2890215971160935253, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1879568670349886005, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1393414778864907420, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -259418370757606562, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
       propertyPath: m_Name
       value: Sig P365 XL
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022677179540000385, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359128788297554301, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7036213049465896255, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676366159067552015, guid: 69f2c2dee330b4a4a91cdf15ee4de3c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

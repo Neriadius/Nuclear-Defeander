@@ -93,23 +93,6 @@ public class EnemyInteraction : MonoBehaviour
             StartCoroutine(Die());
     }
 
-    /*IEnumerator MoveToPlayer(Vector3 targetPosition, float moveSpeed)
-    {
-        // Keep looping until the distance to the target is effectively zero
-        while (Vector3.Distance(transform.position, targetPosition) > 0.001f)
-        {
-            transform.position = Vector3.MoveTowards(
-                transform.position, 
-                targetPosition, 
-                moveSpeed * Time.deltaTime
-            );
-            
-            yield return null;
-        }
-
-        AttackPlayer();
-    }*/
-
     private void AttackPlayer()
     {
         Debug.Log("Player Ded");

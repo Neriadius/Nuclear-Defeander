@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Logic\DoorClose.cs" />
     <Compile Include="Assets\Scripts\Gun\Recoil.cs" />
     <Compile Include="Assets\Scripts\Gun\GunInteraction.cs" />
+    <Compile Include="Assets\Scripts\Gun\AmmoSpawner.cs" />
     <Compile Include="Assets\Useless files\VFXPACK_IMPACT_WALLCOEUR_FreeVersion\Scripts\VfxController.cs" />
     <Compile Include="Assets\Scripts\Logic\ValveLogic.cs" />
     <Compile Include="Assets\Scripts\Enemy\SpawnerManager.cs" />
