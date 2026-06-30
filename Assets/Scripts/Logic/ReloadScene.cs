@@ -3,12 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class ReloadScene : MonoBehaviour
 {
+    public AudioSource click;
+
     public void ReloadMainScene()
     {
-        SceneManager.LoadScene(0);
+        click.Play();
+        SceneManager.LoadScene(1);
     }
     public void Reset()
     {
+        click.Play();
         PlayerPrefs.DeleteAll();
     }
 

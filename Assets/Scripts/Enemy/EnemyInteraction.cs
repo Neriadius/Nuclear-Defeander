@@ -13,6 +13,7 @@ public class EnemyInteraction : MonoBehaviour
     [SerializeField] private List<Transform> enemyPath;
     [SerializeField] private RagdollHandler _ragdollHandler;
     public float currentHealth;
+    private float toTargetDistance = 0.8f;
     private bool isDead;
     private bool isDying;
     private int currentTargetIndex;
@@ -41,15 +42,20 @@ public class EnemyInteraction : MonoBehaviour
         RaycastHit hit;
 
         if (!isDead){
+            bool playerTarget = false;
+
             if (currentTargetIndex == enemyPath.Count)
             {
                 target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
             } else {
                 target = enemyPath[currentTargetIndex].position;
-                target.y = transform.position.y;   
+                target.y = transform.position.y;
+                playerTarget = true;
             }
 
-            if (Vector3.Distance(transform.position, target) > 0.8f)
+            toTargetDistance = (playerTarget) ? 2f : 0.8f;
+
+            if (Vector3.Distance(transform.position, target) > toTargetDistance)
             {
                 // Moves enemy towards main while maintaining the same position.y
                 //target = new Vector3(Camera.main.transform.position.x,transform.position.y,Camera.main.transform.position.z);
@@ -153,7 +159,7 @@ public class EnemyInteraction : MonoBehaviour
     IEnumerator DoorBlocked()
     {
         Debug.Log("${gameObject.name} blocked by door");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
         Debug.Log("${gameObject} died from blocked door");
     }
