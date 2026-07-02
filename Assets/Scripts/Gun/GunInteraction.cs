@@ -12,6 +12,7 @@ public class GunInteraction : MonoBehaviour
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private AudioSource audioSource;
     private TestRecoil recoil_script;
+    private AmmoSpawner ammoSource;
     
     [SerializeField] private TMP_Text AmmoText;
     [SerializeField] private ParticleSystem VFXemitter;
@@ -37,6 +38,7 @@ public class GunInteraction : MonoBehaviour
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         audioSource = GetComponent<AudioSource>();
+        ammoSource = GameObject.FindFirstObjectByType<AmmoSpawner>();
         recoil_script = GetComponent<TestRecoil>();
         if (laserSight == null)
             laserSight = GetComponentInChildren<LaserSight>();
@@ -94,6 +96,7 @@ public class GunInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Ammo"))
         {
             Reload();
+            ammoSource.MagUsed();
             Destroy(collision.gameObject);
         }
     }

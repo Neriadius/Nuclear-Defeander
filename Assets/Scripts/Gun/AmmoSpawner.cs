@@ -8,6 +8,7 @@ public class AmmoSpawner : MonoBehaviour
     private XRSocketInteractor socketInteractor;
     private Vector3 AmmoPos;
     private int SpawnerMagCount = 3;
+    private int UnusedMagCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,9 +23,9 @@ public class AmmoSpawner : MonoBehaviour
             Debug.Log("SpawnerMagCount not found");
         }
         if (SpawnerMagCount > 0){
+            UnusedMagCount = SpawnerMagCount;
             Instantiate(AmmoPrefab,AmmoPos,Quaternion.Euler(0f,0f,90f));
             SpawnerMagCount--;
-            PlayerPrefs.SetInt("SpawnerMagCount",SpawnerMagCount);
             Debug.Log("SpawnerMagCount:" + SpawnerMagCount);
         }
     }
@@ -62,7 +63,6 @@ public class AmmoSpawner : MonoBehaviour
         if (SpawnerMagCount > 0){
             Instantiate(AmmoPrefab,AmmoPos,transform.rotation);
             SpawnerMagCount--;
-            PlayerPrefs.SetInt("SpawnerMagCount",SpawnerMagCount);
             Debug.Log("SpawnerMagCount:" + SpawnerMagCount);
         }
     }
@@ -70,5 +70,12 @@ public class AmmoSpawner : MonoBehaviour
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
         Debug.Log("Ammo selected by socket");
+    }
+
+    public void MagUsed()
+    {
+        UnusedMagCount--;
+        PlayerPrefs.SetInt("SpawnerMagCount",UnusedMagCount);
+        Debug.Log("UnusedMagCount:" + UnusedMagCount);
     }
 }

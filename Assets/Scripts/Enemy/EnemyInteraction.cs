@@ -53,7 +53,7 @@ public class EnemyInteraction : MonoBehaviour
                 playerTarget = true;
             }
 
-            toTargetDistance = (playerTarget) ? 2f : 0.8f;
+            toTargetDistance = (playerTarget) ? 2f : 0.1f;
 
             if (Vector3.Distance(transform.position, target) > toTargetDistance)
             {

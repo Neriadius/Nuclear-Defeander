@@ -24,6 +24,7 @@ public class scoreObject : MonoBehaviour
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         for (int i  = 0; i <= PlayerPrefs.GetInt("lvl"); i++)
         {
+            if(i >= objects.Length) break;
             objects[i].SetActive(true);
         }
         if (Instance != null)
