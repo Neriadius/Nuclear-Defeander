@@ -87,11 +87,13 @@
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\StepManager.cs" />
     <Compile Include="Assets\Scripts\Gun\TestRecoil.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
+    <Compile Include="Assets\Scripts\Logic\MemoryButtonLogic.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\VideoPlayerRenderTexture.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
     <Compile Include="Assets\Unity XR Tools\VRTemplateAssets\Scripts\BooleanToggleVisualsController.cs" />
     <Compile Include="Assets\Scripts\Logic\DoorClose.cs" />
     <Compile Include="Assets\Scripts\Gun\Recoil.cs" />
+    <Compile Include="Assets\Scripts\Logic\buttonValue.cs" />
     <Compile Include="Assets\Scripts\Gun\GunInteraction.cs" />
     <Compile Include="Assets\Scripts\Gun\AmmoSpawner.cs" />
     <Compile Include="Assets\Useless files\VFXPACK_IMPACT_WALLCOEUR_FreeVersion\Scripts\VfxController.cs" />
