@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 3374633888879451293}
   - component: {fileID: 5698365070882839964}
   - component: {fileID: 2807555666920206091}
+  - component: {fileID: 9155344514576566148}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -550,8 +551,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.060565695, y: 0.22803119, z: 0.23551771}
-  m_Center: {x: 0.00046771765, y: 0.023703232, z: -0.0036027692}
+  m_Size: {x: 0.060565695, y: 0.06101052, z: 0.2355177}
+  m_Center: {x: 0.00046771765, y: 0.051540017, z: -0.0036027727}
 --- !u!114 &4026053154505504676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +700,27 @@ MonoBehaviour:
   recoilX: 5
   kickTime: 0.04
   timeToReturn: 0.25
+--- !u!65 &9155344514576566148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4123634448410220797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.060565695, y: 0.10615134, z: 0.05645947}
+  m_Center: {x: 0.00046771765, y: -0.032722633, z: -0.07658033}
 --- !u!1 &4278817271518649507
 GameObject:
   m_ObjectHideFlags: 0

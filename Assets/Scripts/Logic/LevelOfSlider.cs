@@ -39,10 +39,10 @@ public class LevelOfSlider : MonoBehaviour
 
         level = boxSlide.value * 100;
         intLevel = RoundTo5((int)level);
+        LampUpdate(intLevel);
         if (intLevel != SliderValueStored)
         {
             CompareValues(intLevel, compareToValueInt);
-            LampUpdate(intLevel);
             click.Play();
             textLevel.text = intLevel.ToString();
         }
@@ -109,6 +109,7 @@ public class LevelOfSlider : MonoBehaviour
         else
         {
             color = true;
+
             yield return new WaitForSeconds(10);
             if (CompareValues(intLevel, compareToValueInt) == 0)
             {
