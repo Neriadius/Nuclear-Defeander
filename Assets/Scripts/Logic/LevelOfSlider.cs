@@ -91,7 +91,7 @@ public class LevelOfSlider : MonoBehaviour
 
             }
         }
-        SliderValueStored = SliderValue;
+        //SliderValueStored = SliderValue;
     }
     IEnumerator Countdown()
     {
